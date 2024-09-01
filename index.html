@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo de TI - Curso de ADS</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>Currículo Online</h1>
+        <!-- Botão de menu para dispositivos móveis -->
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <!-- Contêiner da navegação -->
+        <div class="nav-container" id="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="#sobre-mim">Sobre Mim</a></li>
+                    <li><a href="#formacao">Formação</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contêiner para o efeito freefall (caracteres caindo) -->
+    <div class="freefall-background"></div>
+
+    <!-- Contêiner principal do conteúdo da página -->
+    <div class="container">
+        <!-- Seção sobre o perfil pessoal -->
+        <section id="sobre-mim" class="profile">
+            <div>
+                <h2>Sobre Mim</h2>
+                <p>
+                    Sou um entusiasta da Tecnologia da Informação com uma paixão por entender e explorar as profundezas
+                    da programação e segurança da informação. Tenho uma sede constante por conhecimento e uma habilidade
+                    natural para resolver problemas complexos. Apesar de ainda não ter uma vasta experiência no mercado
+                    de trabalho, dedico grande parte do meu tempo ao estudo autodidata, explorando desde programação até
+                    práticas de segurança avançadas.
+                </p>
+                <p>
+                    Nos meus momentos livres, gosto de experimentar novas tecnologias, criar pequenos projetos pessoais
+                    e aprimorar minhas habilidades técnicas. Estou sempre disposto a aprender e a enfrentar novos
+                    desafios, com o objetivo de, no futuro, aplicar esse conhecimento de forma prática e contribuir
+                    significativamente para a área de TI.
+                </p>
+                <p>
+                    Fora do mundo da tecnologia, sou uma pessoa curiosa, com interesses que vão desde leitura até
+                    atividades ao ar livre, sempre em busca de novas experiências que possam enriquecer tanto minha vida
+                    pessoal quanto profissional.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção de formação acadêmica e habilidades -->
+        <section id="formacao" class="skills">
+            <h3>Formação e Idiomas</h3>
+            <ul>
+                <li>Curso Análise e Desenvolvimento de Sistemas Uninter (2023-2025)</li>
+                <li>Autodidata em Desenvolvimento Backend com Flask e Python</li>
+                <li>Manipulação de Dados com Pandas e Numpy - Projetos Pessoais</li>
+                <li>Inglês Técnico - Leitura de Documentação e Artigos</li>
+            </ul>
+        </section>
+
+        <!-- Seção de portfólio -->
+        <section id="portfolio" class="experience">
+            <h3>Portfólio</h3>
+            <!-- Botão interativo para ativar o efeito freefall -->
+            <button id="creative-link" class="portfolio-item">
+                Habilidades Criativas no Front-End - Experimento visual usando habilidades combinadas de front-end.
+            </button>
+            <ul>
+                <!-- Lista de projetos no portfólio -->
+                <li>API RESTful com Flask - Desenvolvimento de uma API básica utilizando Flask para
+                    gerenciamento de dados, com suporte para operações CRUD (Create, Read, Update, Delete).
+                </li>
+                <li>Análise de Dados com Pandas - Projeto que envolve a manipulação e análise de
+                    conjuntos de dados utilizando a biblioteca Pandas, com geração de relatórios simples em formato CSV
+                    e Excel.
+                </li>
+                <li>Automação de Tarefas em Python - Desenvolvimento de scripts para automatizar tarefas
+                    repetitivas, como a organização de arquivos e o envio de e-mails automáticos.
+                </li>
+                <li>Ferramenta CLI em Python - Criação de uma ferramenta de linha de comando para
+                    facilitar a interação com scripts Python, permitindo a execução de tarefas específicas de forma
+                    automatizada.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Seção de contato com formulário -->
+        <section id="contato" class="contact">
+            <h3>Contato</h3>
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <p>&copy; 2024 CV Online - Trabalho da disciplina Fundamentos de Desenvolvimento web</p>
+    </footer>
+    
+    <!-- Inclusão do script JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+
+</html>

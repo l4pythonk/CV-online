@@ -1,0 +1,468 @@
+/* Reset básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais do corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #303030, #202020);
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Estilo do cabeçalho */
+header {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(to right, #1f4037, #99f2c8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Estilo do título no cabeçalho */
+header h1 {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+/* Botão de menu para dispositivos móveis */
+.menu-toggle {
+    display: none; /* Escondido em telas maiores */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    z-index: 1001;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilo das linhas do botão de menu */
+.menu-toggle div {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Estilo do botão de menu quando ativo */
+.menu-toggle.active {
+    transform: scale(1.05); /* Aumenta o tamanho total do botão em 5% */
+}
+
+/* Contêiner de navegação */
+.nav-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+/* Estilo da lista de navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Estilo dos itens da lista de navegação */
+nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+/* Estilo dos links de navegação */
+nav ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito ao passar o mouse sobre os links */
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+/* Estilo do menu mobile */
+.nav-container.mobile {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    z-index: 999;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilo da lista de navegação no menu mobile */
+.nav-container.mobile ul {
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Exibir o menu mobile ao clicar no botão */
+.nav-container.mobile.show {
+    transform: translateY(0);
+    display: flex;
+}
+
+/* Contêiner principal do conteúdo da página */
+.container {
+    padding-top: 240px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+/* Estilo das seções */
+section {
+    padding-top: 100px;
+    margin-top: 100px;
+}
+
+/* Estilo da seção de perfil */
+.profile {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px;
+    background: #3d3d3d;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    color: #f0f0f0;
+}
+
+/* Estilo da imagem do perfil */
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre a imagem do perfil */
+.profile img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo do conteúdo textual da seção de perfil */
+.profile div {
+    max-width: 100%;
+    margin-left: 20px;
+}
+
+/* Estilo do título na seção de perfil */
+.profile h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #99f2c8;
+}
+
+/* Estilo dos parágrafos na seção de perfil */
+.profile p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    text-align: justify;
+}
+
+/* Estilo das seções de habilidades, experiência e contato */
+.skills,
+.experience,
+.contact {
+    background: #3d3d3d;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-size: 1.4em;
+}
+
+/* Estilo dos títulos nessas seções */
+.skills h3,
+.experience h3,
+.contact h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Estilo das listas nessas seções */
+.skills ul,
+.experience ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo dos itens nas listas */
+.skills ul li,
+.experience ul li {
+    background: #ff777c;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre os itens das listas */
+.skills ul li:hover,
+.experience ul li:hover {
+    transform: scale(1.05);
+    background: #ff977a;
+}
+
+/* Estilo do formulário de contato */
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo dos rótulos nos campos do formulário */
+.contact label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Estilo dos campos de entrada do formulário */
+.contact input,
+.contact textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+
+/* Estilo do botão de envio do formulário */
+.contact button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #1f4037;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre o botão de envio */
+.contact button:hover {
+    background: #99f2c8;
+}
+
+/* Estilo do botão interativo no portfólio */
+.portfolio-item {
+    background: #ff777c;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;  /* Alinhamento do texto à esquerda para combinar com os outros itens */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    border: none; /* Remover a borda padrão do botão */
+    display: block;
+    width: 100%;  /* Garantir que o botão ocupe toda a largura */
+    font-size: 1em;
+}
+
+/* Efeito ao passar o mouse sobre o botão do portfólio */
+.portfolio-item:hover {
+    background: #fad0c4;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Efeito ao pressionar o botão do portfólio */
+.portfolio-item:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background: #f3b0a0;
+}
+
+/* Padronização dos itens não interativos */
+.experience ul li {
+    background: #ff777c;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: left;
+}
+
+/* Estilo do rodapé */
+footer {
+    background: #1f4037;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 1.2em;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    position: relative;
+}
+
+/* Efeito Freefall */
+.freefall-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1; /* Garantir que o efeito fique atrás do conteúdo principal */
+    overflow: hidden;
+    background-color: transparent;
+}
+
+/* Estilo dos caracteres que "caem" na tela */
+.freefall-char {
+    position: absolute;
+    font-size: 20px;
+    color: rgba(0, 255, 0, 0.7);
+    animation: fall linear infinite;
+    user-select: none;
+    z-index: 0;
+}
+
+/* Animação do efeito Freefall */
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh); /* O efeito faz os caracteres caírem do topo ao fundo da viewport */
+    }
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Exibir o botão de menu em telas menores */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Ocultar o menu de navegação padrão em telas menores */
+    .nav-container {
+        display: none;
+    }
+
+    /* Exibir o menu mobile */
+    .nav-container.mobile {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        z-index: 999;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Ajuste da lista de navegação para mobile */
+    .nav-container.mobile ul {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Exibir o menu mobile ao clicar no botão */
+    .nav-container.mobile.show {
+        transform: translateY(0);
+        display: flex;
+    }
+
+    /* Estilo da lista de navegação no menu mobile */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    /* Ajustes para a seção de perfil em telas menores */
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .profile div {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    /* Ajustes de padding e tamanho das seções em telas menores */
+    .skills, .experience, .contact {
+        padding: 15px;
+    }
+
+    .skills h3, .experience h3, .contact h3 {
+        font-size: 1.5em;
+    }
+
+    .skills ul li, .experience ul li {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    /* Ajustes de tamanho dos campos e botões no formulário de contato */
+    .contact form {
+        width: 100%;
+    }
+
+    .contact input, .contact textarea {
+        font-size: 1em;
+    }
+
+    .contact button {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    /* Ajustes de largura do contêiner principal em telas menores */
+    .container {
+        width: 90%;
+    }
+
+    .nav-container.show {
+        display: flex;
+    }
+}
